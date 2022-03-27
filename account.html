@@ -1,0 +1,40 @@
+<html>
+  <head>
+      <title>absq.xyz</title>
+    <style>
+body{
+    font-family: monospace;
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+h1{
+  text-align: center;
+}
+
+.composeDiv{
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Sign Up or Log In</h1>
+    <label>Username</label><br>
+    <input id="username" style="width: 100%; font-family: monospace;" type="text"><br><br>
+    <label>Password</label><br>
+    <input id="password" style="width: 100%; font-family: monospace;" type="password"><br><br>
+    <button onclick="signUp()" style="font-family: monospace;">Sign Up</button>
+    <button onclick="logIn()" style="font-family: monospace;">Log In</button>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+ <script src="accountHandler.js"></script>
+</html>

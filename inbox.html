@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+body{
+    font-family: monospace;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h1{
+  text-align: center;
+}
+
+.composeDiv{
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.left {
+  flex: 0 0 15%;
+  padding: 20px;
+  border-right: 1px solid gray;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left">
+        <div class="composeDiv">
+          <h2>Compose</h2>
+          <input id="recipient" style="font-family: monospace; width: 90%;" type="text"><br><label> @absq.xyz</label><br><br>
+          <textarea id="content" style="height: 200px; resize: vertical; width: 100%;"></textarea><br><br>
+          <button onclick="sendMail()" style="font-family: monospace;">Send</button>
+         </div>
+<br><hr>
+         <div class="composeDiv">
+          <h2>Settings</h2>
+          <button onclick="clearInbox()" style="font-family: monospace;">Clear Inbox</button><br><br>
+          <button onclick="logOut()" style="font-family: monospace;">Log Out</button>
+         </div>
+      </div>
+      
+<div class="right">
+  <h1 id="mailCount">Your Inbox [Loading...]</h1>
+  <br>
+  <div id="mail">
+  </div>
+</div>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+ <script src="mailHandler.js"></script>
+</html>
